@@ -27,24 +27,44 @@
 
 
 
-    var objA = {
-        nome: 'Joao',
-        idade: 20,
-        hobbies: ['jogar', 'comer']
-    }
-    var objB = {
-        nome: 'jose',
-        idade: 30,
-        hobbies: ['jogar', 'comer']
-    }
-    var objC = JSON.parse(JSON.stringify(objA)) // clona
-    var objC = Object.assign({}, objA) // clona
-    // var objC = objA
+    // var objA = {
+    //     nome: 'Joao',
+    //     idade: 20,
+    //     hobbies: ['jogar', 'comer']
+    // }
+    // console.log(Object.keys(objA))
+    // Object.keys(objA).forEach(item=>console.log(objA[item]))
+    // console.log(Object.values(objA))
 
-    console.log(objA)
-    console.log(objB)
-    objA.nome = 'joaquim'
-    console.log(objC)
+
+    var pessoa1 = {
+        nome: 'joao',
+        idade: 20
+    }
+    var pessoa2 ={
+        nome: 'jose',
+        idade: 30
+    }
+    var pessoa3 = {
+        nome: 'maria',
+        idade: 40
+    }
+
+    var listaPessoas = [pessoa1, pessoa2, pessoa3] // createe
+
+    console.log(
+        listaPessoas.map(({nome, idade})=>({ nome , idade: idade + 1}))) 
+     // update
+
+    //  var pessoa = { nome: 'jose', idade: 20}
+    // console.log(pessoa.nome)
+
+    // var {nome,idade, chuchu} = { nome: 'jose', idade: 20}
+    // console.log(nome)
+    // console.log(idade)
+    // console.log(chuchu)
+
+
     </script>
 </body>
 
