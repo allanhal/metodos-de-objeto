@@ -25,18 +25,26 @@
     // Object.assign() // Clonar
     // Object.values() // Lista todos os valores (value) do objeto
 
+
+
     var objA = {
-        "nome": 'Joao',
+        nome: 'Joao',
         idade: 20,
         hobbies: ['jogar', 'comer']
     }
+    var objB = {
+        nome: 'jose',
+        idade: 30,
+        hobbies: ['jogar', 'comer']
+    }
+    var objC = JSON.parse(JSON.stringify(objA)) // clona
+    var objC = Object.assign({}, objA) // clona
+    // var objC = objA
 
-    var objB = '{"nome":"Joao","idade"20}'
-
-    // console.log(objA)
-    // console.log(JSON.stringify(objA))
-    // console.log(objB)
-    console.log(JSON.parse(objB))
+    console.log(objA)
+    console.log(objB)
+    objA.nome = 'joaquim'
+    console.log(objC)
     </script>
 </body>
 
